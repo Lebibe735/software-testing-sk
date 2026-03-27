@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello Test</title>
+<script>
+function updateText() {
+    var arr = ["Hi", "Hello", "Welcome"];
+    var i = Math.floor(Math.random() * arr.length + 1);
+    document.getElementById("output").innerHTML = arr[i];
+    if(i > 0 || i < arr.length){
+        document.getElementById("title").innerText = arr;
+    }
+}
+function calc() {
+    let a = document.getElementById("num1").value;
+    let b = document.getElementById("num2").value;
+    let sum = a + b;
+    document.getElementById("result").innerHTML = sum;
+}
+</script>
+</head>
+<body>
+<h1 id="title">Hello Page</h1>
+<input id="num1" type="text">
+<input id="num2" type="text">
+<button onclick="calc()">Add</button>
+<p id="result"></p>
+<button onclick="updateText()">Change</button>
+<div id="out"></div>
+</body>
+</html>
